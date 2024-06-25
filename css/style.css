@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/merlina2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.calculadora {
+    text-align: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+#pantalla {
+    background-color: rgb(5, 28, 32);
+    height: 40%;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 100px;
+    text-align: right;
+    color: white;
+}
+
+input[type="button"] {
+    width: 70px;
+    height: 50px;
+}
+
+input[type="button"]:hover {
+    background-color: aqua;
+}
+
+input[type="button"]:last-child {
+    margin-right: 0;
+}
+
+@media only screen and (min-width: 600px) {
+
+    #pantalla {
+        opacity: 80%;
+        height: 70%;
+        padding: 20px;
+        font-size: 20px;
+        margin-top: -1px;
+        color: white;
+        text-align: right;
+    }
+
+    input[type="button"] {
+
+        height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    #pantalla {
+        opacity: 80%;
+        height: 40%;
+        padding: 20px;
+        font-size: 20px;
+        text-align: right;
+    }
+
+    body {
+        background-image: url(../img/merlina.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+}
