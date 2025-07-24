@@ -11,7 +11,7 @@ body {
     align-items: center;
     padding: 20px;
     min-height: 100vh;
-    background-image: url(./img/merlina2.jpg);
+    background-image: url('./img/merlina2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -270,7 +270,7 @@ body {
     }
 
     body {
-        background-image: url(./img/merlina.jpg);
+        background-image: url('./img/merlina.jpg');
         background-position: right center;
         background-attachment: fixed;
         align-items: center;
