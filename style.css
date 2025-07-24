@@ -270,7 +270,7 @@ body {
     }
 
     body {
-        background-image: url(../img/merlina.jpg);
+        background-image: url(./img/merlina.jpg);
         background-position: right center;
         background-attachment: fixed;
         align-items: center;
