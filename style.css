@@ -270,10 +270,10 @@ body {
     }
 
     body {
+        background-image: url(../img/merlina.jpg);
         background-position: right center;
         background-attachment: fixed;
-        justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         padding-right: 100px;
     }
 }
