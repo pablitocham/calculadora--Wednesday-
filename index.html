@@ -4,44 +4,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Calculadora Merlina</title>
 </head>
 
 <body>
+    <div class="calculadora-contenedor">
+        <h1 class="calculadora-titulo"> Calculadora Merlina Addams</h1>
+        <div class="display">
+            <input type="text" id="pantalla" readonly placeholder="0" aria-label="Pantalla de la Calculadora">
+        </div>
+        <div class="button-grid">
+            <button class="btn btn-clear" onclick="calculadora.borrar()" aria-label="Borrar todo">C</button>
+            <button class="btn btn-clear" onclick="calculadora.borrarUltimo()" aria-label="Borrar último">⌫</button>
+            <button class="btn btn-operator" onclick="calculadora.agregar('/')" aria-label="Dividir">÷</button>
+            <button class="btn btn-operator" onclick="calculadora.agregar('*')" aria-label="Multiplicar">x</button>
 
-    <div class="calculadora">
-        <input type="text" id="pantalla" readonly>
-        <br>
-        <input type="button" value="1" onclick="agregar ('1')">
-        <input type="button" value="2" onclick="agregar ('2')">
-        <input type="button" value="3" onclick="agregar ('3')">
-        <input type="button" value="+" onclick="agregar ('+')">
-        <br>
-        <input type="button" value="4" onclick="agregar ('4')">
-        <input type="button" value="5" onclick="agregar ('5')">
-        <input type="button" value="6" onclick="agregar ('6')">
-        <input type="button" value="-" onclick="agregar ('-')">
-        <br>
-        <input type="button" value="7" onclick="agregar ('7')">
-        <input type="button" value="8" onclick="agregar ('8')">
-        <input type="button" value="9" onclick="agregar ('9')">
-        <input type="button" value="*" onclick="agregar ('*')">
-        <br>
-        <input type="button" value="0" onclick="agregar ('0')">
-        <input type="button" value="." onclick="agregar ('.')">
-        <input type="button" value="/" onclick="agregar ('/')">
-        <input type="button" value="=" onclick="calcular()">
-        <br>
-        <input type="button" value="C" onclick="borrar()">
+            <button class="btn btn-number" onclick="calculadora.agregar('7')" aria-label="Siete">7</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('8')" aria-label="Ocho">8</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('9')" aria-label="Nueve">9</button>
+            <button class="btn btn-operator" onclick="calculadora.agregar('-')" aria-label="Resta">-</button>
+
+            <button class="btn btn-number" onclick="calculadora.agregar('4')" aria-label="Cuatro">4</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('5')" aria-label="Cinco">5</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('6')" aria-label="Seis">6</button>
+            <button class="btn btn-operator" onclick="calculadora.agregar('+')" aria-label="Suma">+</button>
+
+            <button class="btn btn-number" onclick="calculadora.agregar('1')" aria-label="Uno">1</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('2')" aria-label="Dos">2</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('3')" aria-label="Tres">3</button>
+            <button class="btn btn-equals" onclick="calculadora.calcular()" aria-label="Igual">=</button>
+
+            <button class="btn btn-number" onclick="calculadora.agregar('0')" aria-label="Cero">0</button>
+            <button class="btn btn-number" onclick="calculadora.agregar('.')" aria-label="Punto decimal">.</button>
+        </div>
+
+        <div class="audio-control">
+            <button class="wednesday-btn" id="audioBtn" onclick="calculadora.reproducir()"
+                aria-label="Reproducir música">🎵 Modo Merlina
+            </button>
+        </div>
     </div>
-    <div>
-        <audio id="bloodyMary" src="audio/Bloody mary.mp3" loop></audio>
-    </div>
-    <div class="boton">
-         <button onclick= playAudio()>Wednesday </button >
-    </div>
-    <script src="style.js"></script>
+
+    <audio id="bloodyMary" preload="metadata" loop>
+        <source src="./audio/Bloody mary.mp3">
+    </audio>
+
+    <script src="style.js" defer></script>
 </body>
 
 </html>
